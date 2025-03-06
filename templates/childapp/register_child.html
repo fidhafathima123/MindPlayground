@@ -1,0 +1,27 @@
+<!-- templates/children/register_child.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Register New Child</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Register Child</button>
+                            <a href="{% url 'children:child_list' %}" class="btn btn-secondary ml-2">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

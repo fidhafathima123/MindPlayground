@@ -1,0 +1,68 @@
+
+{% include 'header.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSpark - Learn Coding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background-color: #e6f0ff;
+            padding: 50px 0;
+        }
+        .btn-primary {
+            background-color: #5c0dbc;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #450999;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+
+
+<!-- Hero Section -->
+<div class="row">
+    <div class="col-md-4">
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="fw-bold">Unlock your child’s future </h1>
+        <p>✔ Kids create their own games in just 1 week!<br>
+           ✔ Learn to code through our classes & award-winning app<br>
+           ✔ Boost creativity, problem-solving, & communication skills</p>
+        <a href="#" class="btn btn-primary btn-lg">Start Your Free Trial</a>
+        <p class="text-muted mt-2">Cancel anytime</p>
+    </div>
+</section>
+</div>
+<!-- Image Section -->
+<div class="col-md-7" style="padding-left: 3%;">
+<div class="container text-center position-relative image-section">
+    <img src="static/img/home-page-girl.png" class="img-fluid" alt="home page girl">
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+</html>
+
+
+        {% include 'footer.html' %}
+</div>
+<br><br><br>

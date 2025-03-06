@@ -1,0 +1,374 @@
+<!-- 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            background-image: url('https://source.unsplash.com/1600x900/?education,kids');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .login-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .clouds {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .cloud {
+            position: absolute;
+            width: 100px;
+        }
+        .cloud1 { top: 10%; left: 5%; }
+        .cloud2 { top: 20%; right: 10%; }
+        .cloud3 { bottom: 10%; left: 15%; }
+        .cloud4 { bottom: 20%; right: 20%; }
+
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="clouds">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud1" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud2" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud3" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud4" alt="Cloud">
+    </div>
+    <div class="login-container" background-size="cover" ; width="100%" ;  height="100vh" ; id="content-wrapper" class="mt-10">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>  -->
+
+
+
+
+
+
+
+<!-- {% include 'header.html' %} 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            background-image: url('https://source.unsplash.com/1600x900/?education,kids');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin: auto; /* Center the form */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .clouds {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .cloud {
+            position: absolute;
+            width: 100px;
+        }
+        .cloud1 { top: 10%; left: 15%; }
+        .cloud2 { top: 20%; right: 10%; }
+        .cloud3 { bottom: 10%; left: 15%; }
+        .cloud4 { bottom: 20%; right: 20%; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        {% include 'header.html' %}
+    </div>
+    <div class="clouds">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud1" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud2" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud3" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud4" alt="Cloud">
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+-->
+
+
+
+
+
+
+
+{% include 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8faff;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            
+        }
+        .clouds {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .cloud {
+            position: absolute;
+            width: 100px;
+        }
+        .cloud1 { top: 10%; left: 5%; }
+        .cloud2 { top: 20%; right: 10%; }
+        .cloud3 { bottom: 10%; left: 15%; }
+        .cloud4 { bottom: 20%; right: 20%; }
+
+        .logo {
+            margin-top: 20px;
+        }
+
+        .register-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .register-box img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .btn-next {
+            background-color: #ccc;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+        }
+
+        .btn-next:hover {
+            background-color: #bbb;
+        }
+
+        .footer {
+            background: #0c1b34;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer img {
+            width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cloud Background -->
+    <div class="clouds">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud1" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud2" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud3" alt="Cloud">
+        <img src="{% static 'img/cloud3.png' %}" class="cloud cloud4" alt="Cloud">
+    </div>
+    
+
+    <!-- Logo -->
+    
+
+    <!-- Registration Card -->
+    <div class="register-box">
+     
+        
+        <h2>Sign In</h2>
+        <form method="POST">   
+            {% csrf_token %}
+            <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
+            <input type="password" name="password"  class="form-control mb-3" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+            
+        <!-- <p> email</p>
+
+        <input type="email" class="form-control mb-3" placeholder="">
+        <p>user-id</p>
+
+        <input type="text" class="form-control mb-3" placeholder="">
+        <p>password</p>
+
+        <input type="password" class="form-control mb-3" placeholder="">
+        
+
+        <p class="small mt-2"> <a href="#"></a>.</p>
+
+        <button class="btn btn-primary">Sign In</button> -->
+    </form>
+    </div>
+
+    <!-- Footer -->
+    
+
+</body>
+</html>

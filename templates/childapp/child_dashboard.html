@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 5px;
+            border-radius: 8px;
+        }
+        .sidebar a.active {
+            background-color: #6a5acd;
+            color: white;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .card {
+            border-radius: 15px;
+        }
+        .schedule-box {
+            background: #6a5acd;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h4>SLONUM</h4>
+        <a href="#" class="active">Home</a>
+        <a href="#">Schedule</a>
+        <a href="#">Tasks</a>
+        <a href="#">Subjects</a>
+        <a href="#">Courses</a>
+        <a href="#">Recordings</a>
+        <a href="#">Messages</a>
+    </div>
+    
+    <div class="content">
+        <h2>Glad to see you!</h2>
+        <div class="schedule-box">
+            <h4>Olympiad Mathematics</h4>
+            <p>Module 16 of the Mathematics 2.0 course</p>
+            <button class="btn btn-light">Continue the Lesson</button>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>English Language - Today, 2 PM</h5>
+                    <h5>History - Tuesday, 4 PM</h5>
+                    <h5>Physics - Tuesday, 5 PM</h5>
+                    <h5>Biology - Tuesday, 6 PM</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Physics - Wednesday, 5 PM</h5>
+                    <h5>Biology - Wednesday, 6 PM</h5>
+                    <h5>Spanish Language - Wednesday, 6 PM</h5>
+                    <h5>History - Friday, 7 PM</h5>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="mt-4">Class Schedule</h3>
+        <div class="row mt-2">
+            <div class="col">
+                <div class="schedule-box">Tuesday - 12:00 English Language</div>
+            </div>
+            <div class="col">
+                <div class="schedule-box">Tuesday - 12:00 History</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

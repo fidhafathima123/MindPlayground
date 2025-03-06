@@ -1,0 +1,55 @@
+<!-- templates/children/child_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Children List</h2>
+                {% if user.guardian_children %}
+                <a href="" class="btn btn-primary">
+                    Register New Child
+                </a>
+                {% endif %}
+            </div>
+            
+            {% if children %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>School</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for child in children %}
+                        <tr>
+                            <td>{{ child.get_full_name }}</td>
+                            <td>{{ child.age }}</td>
+                            <td>{{ child.get_gender_display }}</td>
+                            <td>{{ child.school_name }}</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-info">View Details</a>
+                                {% if user.guardian_children %}
+                                <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                No children registered yet.
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
